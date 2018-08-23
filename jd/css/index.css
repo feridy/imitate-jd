@@ -24,18 +24,46 @@
 .J_event i::before {
     content: "\ea0f";
 }
+/* 顶部广告结束 */
 /* header 导航栏 */
 .header {
     height: 30px;
     background-color: #e3e4e5;
 }
+/* 定位位置标识开始 */
 .pos_item {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
+    float: left;
+    margin-left: 200px;
     font-size: 12px;
     color: #999999;
 }
+.pos_item:hover {
+    background-color: #fff;
+}
+.pos_item:hover .location_con {
+    display: block;
+}
+.show_con {
+    padding-left: 7px;
+    padding-right:7px;
+    height: 30px;
+    line-height: 30px;
+}
+.pos_item i {
+    color: rgb(241,2,41);
+}
+/* 存放每个省市的盒子 */
+.location_con {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 420px;
+    height: 420px;
+    background-color: aqua;
+    display: none;
+}
+/* 导航栏详细链接样式开始 */
 .nav {
     float: right;
     font-size: 12px;
@@ -75,4 +103,23 @@
     top: 1.5px;
     font-size: 10px;
     color: #999999;
+}
+
+/* 搜索框的容器的样式 */
+.search_container {
+    position: relative;
+    height: 150px;
+    border: 1px solid #000;
+}
+.logo {
+    position: absolute;
+    border: 1px solid #000;
+    left: 0;
+    top: -30px;
+}
+.logo a {
+    display: inline-block;
+    height: 170px;
+    width: 190px;
+    background: #ffffff url(../images/logo.png) no-repeat 0 0;
 }
